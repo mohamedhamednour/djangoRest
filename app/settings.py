@@ -133,11 +133,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 MEDIA_URL='/media/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build' ,'static' )
 STATICFILES_DIRES=(os.path.join(BASE_DIR,'static'))
 staticfiles_storage = 'whitenoise.storage.compressedmanifeststaticfilesstorage'
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 
 CORS_ALLOW_ALL_ORIGINS = True
