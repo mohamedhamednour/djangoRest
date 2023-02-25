@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', cast=bool)
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -133,11 +133,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 MEDIA_URL='/media/'
-STATICFILES_DIRES=(os.path.join(BASE_DIR,'static'))
 staticfiles_storage = 'whitenoise.storage.compressedmanifeststaticfilesstorage'
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRES=(os.path.join(BASE_DIR,'static'))
 
 
 CORS_ALLOW_ALL_ORIGINS = True
